@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#071620"/>
+  <g transform="translate(840,150)" fill="#38bdf8">
+    <rect x="20" y="0" width="26" height="26"/>
+    <rect x="52" y="0" width="26" height="26"/>
+    <rect x="0" y="32" width="104" height="26"/>
+    <rect x="0" y="64" width="104" height="26"/>
+    <rect x="20" y="96" width="26" height="26"/>
+  </g>
+  <text x="90" y="160" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="76" font-weight="800" fill="#e6eef4" letter-spacing="-1">Nonogram</text>
+  <text x="90" y="215" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="27" fill="#90a7b6">Daily picross puzzle</text>
+  <text x="90" y="440" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="24" fill="#e6eef4">Fill the grid, reveal the picture</text>
+  <text x="90" y="488" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="22" fill="#90a7b6">Free · no sign-up · runs in your browser</text>
+</svg>

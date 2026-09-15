@@ -1,0 +1,87 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f0f4f8;
+  --card: #ffffff;
+  --card-2: #dbe7f0;
+  --ink: #0c1f2e;
+  --ink-soft: #536a7a;
+  --line: #c6d6e0;
+  --brand: #0c4a6e;
+  --fill: #0c1f2e;
+  --mark: #94a3b8;
+  --good: #15803d;
+  --good-soft: #dcfce7;
+  --clue-done: #94a3b8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1620;
+    --card: #10202c;
+    --card-2: #17303f;
+    --ink: #e6eef4;
+    --ink-soft: #90a7b6;
+    --line: #223a4a;
+    --brand: #38bdf8;
+    --fill: #e6eef4;
+    --mark: #6b7c88;
+    --good: #4ade80;
+    --good-soft: #0f2f1e;
+    --clue-done: #45606f;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 640px; margin: 0 auto; padding: 22px 16px 60px; }
+h1 { font-size: clamp(1.5rem, 4.5vw, 2rem); margin: 0 0 6px; letter-spacing: -0.02em; }
+.lede { color: var(--ink-soft); margin: 0 0 18px; max-width: 60ch; font-size: 0.92rem; }
+
+.mode-row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.mode-buttons { display: flex; gap: 6px; }
+.mode-buttons button, .actions button {
+  border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-weight: 600;
+  padding: 7px 13px; border-radius: 8px; cursor: pointer;
+}
+.mode-buttons button.active, .actions button.active { background: var(--brand); border-color: var(--brand); color: #fff; }
+.mode-row select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+.timer { margin-left: auto; font-variant-numeric: tabular-nums; font-weight: 700; color: var(--ink-soft); }
+
+.board-wrap { overflow-x: auto; margin-bottom: 16px; }
+.board { border-collapse: collapse; margin: 0 auto; }
+.board td { border: 1px solid var(--line); text-align: center; padding: 0; }
+.corner { border: none !important; }
+.col-clue, .row-clue {
+  font-size: 0.72rem; color: var(--ink-soft); font-weight: 700; background: var(--card); border: none !important;
+  padding: 2px 4px !important; white-space: nowrap;
+}
+.col-clue { vertical-align: bottom; line-height: 1.1; }
+.row-clue { text-align: right; }
+.col-clue.satisfied, .row-clue.satisfied { color: var(--clue-done); }
+.cell {
+  width: 32px; height: 32px; cursor: pointer; background: var(--card); user-select: none;
+  font-size: 1rem; font-weight: 700; color: var(--mark);
+}
+.cell.filled { background: var(--fill); }
+.cell.block-edge { border-right: 2px solid var(--ink-soft); }
+.cell.block-edge-row { border-bottom: 2px solid var(--ink-soft); }
+
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.actions button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.win-message { text-align: center; font-weight: 700; color: var(--good); background: var(--good-soft); padding: 12px; border-radius: 10px; margin-bottom: 20px; }
+
+.explainer { margin-top: 36px; border-top: 1px solid var(--line); padding-top: 10px; }
+.explainer h2 { font-size: 1.1rem; margin: 18px 0 8px; }
+.explainer h3 { font-size: 0.96rem; margin: 16px 0 6px; }
+.explainer p { color: var(--ink-soft); font-size: 0.9rem; }
+
+@media (max-width: 480px) {
+  .cell { width: 26px; height: 26px; }
+}
