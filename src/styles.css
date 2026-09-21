@@ -85,3 +85,12 @@ h1 { font-size: clamp(1.5rem, 4.5vw, 2rem); margin: 0 0 6px; letter-spacing: -0.
 @media (max-width: 480px) {
   .cell { width: 26px; height: 26px; }
 }
+
+/* a11y-contrast-fixes (auto, WCAG AA 4.5:1) */
+@media (prefers-color-scheme: light) {
+  .cell { color: #6b7584; }
+}
+@media (prefers-color-scheme: dark) {
+  .mode-buttons button.active, .actions button.active { color: #0b0b0f; }
+  .cell { color: #7d8c96; }
+}
